@@ -1,0 +1,9 @@
+.nav {
+    grid-area: n;
+    border-radius: 5px;
+    background: rgba(255, 78, 0, 0.4);
+}
+
+.item {
+    color: whitesmoke;
+}
