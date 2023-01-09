@@ -2,33 +2,40 @@ import React from 'react';
 import s from './Dialogs.module.css'
 import {NavLink} from "react-router-dom";
 
+
+const DialogItems = (props: any) => {
+    let path = '/dialogs/' + props.id;
+
+    return (
+        <div className={s.dialog + ' ' + s.active}>
+            <NavLink to={path}>{props.name}</NavLink>
+        </div>
+    )
+}
+
+const Message = (props:any) => {
+    return (
+        <div>
+            <div className={s.message}>{props.message}</div>
+        </div>
+    )
+}
+
 export const Dialogs = () => {
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
-                <div className={s.dialog}>
-                    <NavLink to='/dialogs/1'>Mark</NavLink>
-                </div>
-                <div className={s.dialog}>
-                    <NavLink to='/dialogs/2'>Clark</NavLink>
-                </div>
-                <div className={s.dialog}>
-                    <NavLink to='/dialogs/3'>Gregory</NavLink>
-                </div>
-                <div className={s.dialog + ' ' + s.active}>
-                    <NavLink to='/dialogs/4'>Teena</NavLink>
-                </div>
-                <div className={s.dialog}>
-                    <NavLink to='/dialogs/5'>Maria</NavLink>
-                </div>
-                <div className={s.dialog}>
-                    <NavLink to='/dialogs/6'>Helena</NavLink>
-                </div>
+                <DialogItems name='Mark' id='1'/>
+                <DialogItems name='Clark' id='2'/>
+                <DialogItems name='Gregory' id='3'/>
+                <DialogItems name='Teena' id='4'/>
+                <DialogItems name='Maria' id='5'/>
+                <DialogItems name='Helena' id='6'/>
             </div>
             <div className={s.messages}>
-                <div className={s.message}>Hi!</div>
-                <div className={s.message}>How is your study?</div>
-                <div className={s.message}>I am God!</div>
+                <Message message='Hi!'/>
+                <Message message='How is your study?'/>
+                <Message message='I am God!'/>
             </div>
         </div>
     );
