@@ -2,8 +2,14 @@
     grid-area: n;
     border-radius: 5px;
     background: rgba(255, 78, 0, 0.4);
+    padding: 30px;
 }
 
-.item {
+.item a {
     color: whitesmoke;
+    text-decoration: none;
+}
+
+.item a.activeLink {
+    color: orange;
 }
