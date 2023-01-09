@@ -10,19 +10,19 @@ export const Dialogs = () => {
                     <NavLink to='/dialogs/1'>Mark</NavLink>
                 </div>
                 <div className={s.dialog}>
-                    <NavLink to='/dialogs/1'>Clark</NavLink>
+                    <NavLink to='/dialogs/2'>Clark</NavLink>
                 </div>
                 <div className={s.dialog}>
-                    <NavLink to='/dialogs/1'>Gregory</NavLink>
+                    <NavLink to='/dialogs/3'>Gregory</NavLink>
                 </div>
                 <div className={s.dialog + ' ' + s.active}>
-                    <NavLink to='/dialogs/1'>Teona</NavLink>
+                    <NavLink to='/dialogs/4'>Teona</NavLink>
                 </div>
                 <div className={s.dialog}>
-                    <NavLink to='/dialogs/1'>Maria</NavLink>
+                    <NavLink to='/dialogs/5'>Maria</NavLink>
                 </div>
                 <div className={s.dialog}>
-                    <NavLink to='/dialogs/1'>Helena</NavLink>
+                    <NavLink to='/dialogs/6'>Helena</NavLink>
                 </div>
             </div>
             <div className={s.messages}>
