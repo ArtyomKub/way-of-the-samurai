@@ -11,8 +11,11 @@ const App = () => {
         <div className='app-wrapper'>
             <Header/>
             <Navbar/>
-            {/*<Profile/>*/}
-            <Dialogs/>
+            <div className='app-wrapper-content'>
+                <Profile/>
+                <Dialogs/>
+            </div>
+
         </div>
     );
 }

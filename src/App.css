@@ -12,3 +12,9 @@
     grid-gap: 10px;
     justify-content: center;
 }
+
+.app-wrapper-content {
+    grid-area: c;
+    border-radius: 5px;
+    background: rgba(255, 78, 0, 0.4);
+}
