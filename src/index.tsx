@@ -24,26 +24,32 @@ let posts = [
     {id: 3, message: 'HA HA HA HA', likesCount: 1},
     {id: 4, message: 'English Learning', likesCount: 24},
 ]
-type DialogsType = {
+
+export type DialogsType = {
     id: number
     name: string
 }
-type MessagesType = {
+
+export type MessagesType = {
     id: number
     message: string
 }
-type PostsType = {
+
+export type PostsType = {
     id: number
     message: string
     likesCount: number
 }
+
 export type DialogsPagePropsType = {
     dialogs: Array<DialogsType>
     messages: Array<MessagesType>
 }
+
 export type ProfilePagePropsType = {
     posts: Array<PostsType>
 }
+
 export type AllPropsType = {
     dialogs: Array<DialogsType>
     messages: Array<MessagesType>
@@ -56,6 +62,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
     <React.StrictMode>
+        {/*<App appState={state}/>*/}
+
         <App dialogs={dialogs}
              messages={messages}
              posts={posts}
@@ -63,7 +71,4 @@ root.render(
     </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
