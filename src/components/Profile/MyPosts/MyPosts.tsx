@@ -2,6 +2,7 @@ import React from 'react';
 import {Post} from "./Post/Post";
 import s from './MyPosts.module.css'
 
+
 export const MyPosts = () => {
 
     let posts = [
