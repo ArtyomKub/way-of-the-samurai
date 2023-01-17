@@ -1,4 +1,6 @@
-export let state = {
+import {StateType} from "../index";
+
+export let state: StateType = {
     posts: [
         {id: 1, message: 'Hi, how are you?', likesCount: 12},
         {id: 2, message: 'It is my first post', likesCount: 17},
