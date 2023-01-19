@@ -11,6 +11,13 @@ export const Dialogs: React.FC<DialogsPagePropsType> = (props) => {
 
     let messagesElements = props.messages.map(m => <Message key={m.id} message={m.message}/>)
 
+    let newMessageElement = React.createRef<HTMLTextAreaElement>();
+
+    let addMessage = () => {
+        let text = newMessageElement.current?.value
+        alert(text)
+    }
+
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
@@ -18,6 +25,12 @@ export const Dialogs: React.FC<DialogsPagePropsType> = (props) => {
             </div>
             <div className={s.messages}>
                 {messagesElements}
+                <div>
+                    <textarea ref={newMessageElement}/>
+                </div>
+                <div>
+                    <button onClick={addMessage}>Add Message</button>
+                </div>
             </div>
         </div>
     );

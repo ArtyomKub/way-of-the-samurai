@@ -8,15 +8,23 @@ export const MyPosts: React.FC<ProfilePagePropsType> = (props) => {
 
     let postsElements = props.posts.map(p => <Post key={p.id} message={p.message} likesCount={p.likesCount}/>)
 
+    let newPostElement = React.createRef<HTMLTextAreaElement>();
+
+    let addPost = () => {
+        let text = newPostElement.current?.value;
+        alert(text)
+    }
+
     return (
         <div className={s.postsBlock}>
             <h3>My posts</h3>
             <div>
                 <div>
-                    <textarea/>
+                    <textarea ref={newPostElement}/>
                 </div>
                 <div>
-                    <button>Add post</button>
+                    <button onClick={addPost}>Add post
+                    </button>
                 </div>
             </div>
             <div className={s.posts}>

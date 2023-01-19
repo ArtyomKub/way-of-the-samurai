@@ -11,9 +11,11 @@ import {Music} from "./components/Music/Music";
 import {Settings} from "./components/Settings/Settings";
 import {StateType} from "./index";
 
+
 type AppType = {
     appState: StateType
 }
+
 const App = (props: AppType) => {
     return (
         <BrowserRouter>
