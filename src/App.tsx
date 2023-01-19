@@ -14,6 +14,7 @@ import {StateType} from "./index";
 
 export type AppType = {
     state: StateType
+    addPost: (postMessage: string) => void
 }
 
 const App = (props: AppType) => {
@@ -26,7 +27,8 @@ const App = (props: AppType) => {
                     <Routes>
                         <Route path='/dialogs/*' element={<Dialogs state={props.state.dialogsPage}/>}/>
 
-                        <Route path='/profile' element={<Profile state={props.state.profilePage}/>}/>
+                        <Route path='/profile' element={<Profile state={props.state.profilePage}
+                                                                 addPost={props.addPost}/>}/>
                         <Route path='/news' element={<News/>}/>
                         <Route path='/music' element={<Music/>}/>
                         <Route path='/settings' element={<Settings/>}/>

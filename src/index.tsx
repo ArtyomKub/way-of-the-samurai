@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {state} from "./redux/state";
+import {addPost, state} from "./redux/state";
 
 
 export type DialogsType = {
@@ -27,7 +27,10 @@ export type DialogsPagePropsType = {
 
 export type ProfilePagePropsType = {
     posts: Array<PostsType>
+    state: ProfilePageType
+    addPost: (postMessage:string) => void
 }
+
 
 export type ProfilePageType = {
     posts: Array<PostsType>
@@ -44,18 +47,12 @@ export type StateType = {
 }
 
 
-// export type StateType = {
-//     dialogs: Array<DialogsType>
-//     messages: Array<MessagesType>
-//     posts: Array<PostsType>
-// }
-
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 root.render(
     <React.StrictMode>
-        <App state={state}/>
+        <App state={state} addPost={addPost}/>
     </React.StrictMode>
 );
 

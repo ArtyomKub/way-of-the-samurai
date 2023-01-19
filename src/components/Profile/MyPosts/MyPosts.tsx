@@ -10,9 +10,9 @@ export const MyPosts: React.FC<ProfilePagePropsType> = (props) => {
 
     let newPostElement = React.createRef<HTMLTextAreaElement>();
 
-    let addPost = () => {
+    const addPost = (postMessage:string) => {
         let text = newPostElement.current?.value;
-        alert(text)
+        props.addPost(text)
     }
 
     return (

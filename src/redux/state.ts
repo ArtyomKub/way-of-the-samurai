@@ -28,8 +28,11 @@ export let state: StateType = {
     }
 }
 
-// let addPost =(postMessage)=> {
-//     return (
-//         state.profilePage.posts.push();
-//     )
-// }
+export const addPost = (postMessage: string) => {
+    const newPost = {
+        id: 5,
+        message: postMessage,
+        likesCount: 0
+    }
+    state.profilePage.posts.push(newPost)
+}

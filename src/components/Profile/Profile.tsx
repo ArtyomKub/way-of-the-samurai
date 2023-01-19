@@ -1,17 +1,15 @@
 import React from 'react';
 import {MyPosts} from "./MyPosts/MyPosts";
 import {ProfileInfo} from "./ProfileInfo/ProfileInfo";
-import {ProfilePagePropsType, ProfilePageType} from "../../index";
+import {ProfilePagePropsType} from "../../index";
 
-type ProfilePagePrType = {
-    state: ProfilePageType
-}
 
-export const Profile: React.FC<ProfilePagePrType> = (props) => {
+
+export const Profile: React.FC<ProfilePagePropsType> = (props) => {
     return (
         <div>
             <ProfileInfo/>
-            <MyPosts posts={props.state.posts}/>
+            <MyPosts posts={props.state.posts} addPost={props.addPost}/>
         </div>
     )
 }
