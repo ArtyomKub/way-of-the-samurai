@@ -12,8 +12,8 @@ import {Settings} from "./components/Settings/Settings";
 import {StateType} from "./index";
 
 
-type AppType = {
-    appState: StateType
+export type AppType = {
+    state: StateType
 }
 
 const App = (props: AppType) => {
@@ -24,9 +24,9 @@ const App = (props: AppType) => {
                 <Navbar/>
                 <div className='app-wrapper-content'>
                     <Routes>
-                        <Route path='/dialogs/*' element={<Dialogs dialogs={props.appState.dialogs}
-                                                                   messages={props.appState.messages}/>}/>
-                        <Route path='/profile' element={<Profile posts={props.appState.posts}/>}/>
+                        <Route path='/dialogs/*' element={<Dialogs state={props.state.dialogsPage}/>}/>
+
+                        <Route path='/profile' element={<Profile state={props.state.profilePage}/>}/>
                         <Route path='/news' element={<News/>}/>
                         <Route path='/music' element={<Music/>}/>
                         <Route path='/settings' element={<Settings/>}/>

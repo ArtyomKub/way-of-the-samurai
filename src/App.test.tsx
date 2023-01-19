@@ -1,15 +1,18 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import App from './App';
 
 const state = {
-  posts: [],
-  dialogs: [],
-  messages: []
+    profilePage: {
+        posts: []
+    }, dialogsPage: {
+        messages: [],
+        dialogs: []
+    }
 }
 
 test('renders learn react link', () => {
-  render(<App appState={state}/>);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+    render(<App state={state}/>);
+    const linkElement = screen.getByText(/learn react/i);
+    expect(linkElement).toBeInTheDocument();
 });
