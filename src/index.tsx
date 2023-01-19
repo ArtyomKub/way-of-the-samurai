@@ -32,9 +32,9 @@ export type ProfilePagePropsType = {
 }
 
 export type StateType = {
-    dialogs?: Array<DialogsType>
-    messages?: Array<MessagesType>
-    posts?: Array<PostsType>
+    dialogs: Array<DialogsType>
+    messages: Array<MessagesType>
+    posts: Array<PostsType>
 }
 
 const root = ReactDOM.createRoot(
